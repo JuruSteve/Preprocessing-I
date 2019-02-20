@@ -142,6 +142,9 @@ body {
   height: 100%;
   font-family: @font-stack;
   font-size: 62.5%;
+  p {
+    line-height: 1.25;
+  }
 }
 
 .container {
@@ -162,8 +165,45 @@ header {
 }
 
 .top-content {
-  padding-top: 20px;
-  background: aliceblue;
-  border: 1px solid aliceblue;
+  padding: 20px 0;
+  background: #e9ecef;
+  border: 1px solid #e9ecef;
   border-radius: 5px;
+  .profile-img {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+      padding: 40px 40px 0px 40px;
+    }
+  } //profile-img
+  .introduction {
+    .name {
+      font-size: 6rem;
+    }
+    h1 {
+      padding: 20px 40px 0px 40px;
+    }
+    .short-bio {
+      padding: 20px 40px;
+    }
+    // h1,
+    // p,
+    .freelance {
+      padding: 20px 40px;
+      margin-bottom: 20px;
+      .freelance-text {
+        border-top: 1px solid black;
+        padding: 30px 0;
+      }
+      .cta {
+        background-color: #808080;
+        cursor: pointer;
+        padding: 10px 5%;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        color: white;
+      }
+    }
+  }
 }

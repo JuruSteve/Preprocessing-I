@@ -136,6 +136,10 @@ body {
   font-family: Arial, "sans-serif";
   font-size: 62.5%;
 }
+html p,
+body p {
+  line-height: 1.25;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -152,8 +156,41 @@ header nav a {
   color: #333;
 }
 .top-content {
-  padding-top: 20px;
-  background: aliceblue;
-  border: 1px solid aliceblue;
+  padding: 20px 0;
+  background: #e9ecef;
+  border: 1px solid #e9ecef;
   border-radius: 5px;
+}
+.top-content .profile-img {
+  width: 50%;
+}
+.top-content .profile-img img {
+  width: 100%;
+  height: auto;
+  padding: 40px 40px 0px 40px;
+}
+.top-content .introduction .name {
+  font-size: 6rem;
+}
+.top-content .introduction h1 {
+  padding: 20px 40px 0px 40px;
+}
+.top-content .introduction .short-bio {
+  padding: 20px 40px;
+}
+.top-content .introduction .freelance {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}
+.top-content .introduction .freelance .freelance-text {
+  border-top: 1px solid black;
+  padding: 30px 0;
+}
+.top-content .introduction .freelance .cta {
+  background-color: #808080;
+  cursor: pointer;
+  padding: 10px 5%;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: white;
 }
