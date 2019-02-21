@@ -4,56 +4,267 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+// Styles
+
+@font-stack: Arial, "sans-serif";
+
+html,
+body {
+  height: 100%;
+  font-family: @font-stack;
+  font-size: 62.5%;
+  p {
+    line-height: 1.25;
+  }
 }
 
-html, body {
-    height: 100%;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
 
+header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+  nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #333;
+  }
+}
+
+.top-content {
+  padding: 20px 0;
+  background: #e9ecef;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  .profile-img {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+      padding: 40px 40px 0px 40px;
+    }
+  } //profile-img
+  .introduction {
+    .name {
+      font-size: 6rem;
+    }
+    h1 {
+      padding: 20px 40px 0px 40px;
+    }
+    .short-bio {
+      padding: 20px 40px;
+    }
+    // h1,
+    // p,
+    .freelance {
+      padding: 20px 40px;
+      margin-bottom: 20px;
+      .freelance-text {
+        border-top: 1px solid black;
+        padding: 30px 0;
+      }
+      .cta {
+        background-color: #808080;
+        cursor: pointer;
+        padding: 10px 5%;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.main-content {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  .description,
+  .skills {
+    width: 45%;
+    flex-wrap: wrap;
+    .skills-list {
+      border: 1px solid;
+      border-bottom: 0;
+      .skill {
+        border-bottom: 1px solid;
+        padding: 6px;
+      }
+    }
+  }
+}
+
+.bottom-content {
+  margin-bottom: 20px;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+footer {
+  text-align: center;
+  margin: 60px 0 40px 0;
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.wrapper.style1 .inner.medium {
+  width: 48rem;
+}
+
+@media screen and (max-width: 980px) {
+  .wrapper.style1 .inner {
+    padding: 4.5rem 3rem 2.5rem 3rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper.style1 .inner {
+    padding: 4rem 4rem 2rem 4rem;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .wrapper.style1 .inner {
+    padding: 5rem 2.5rem 3rem 2.5rem;
+  }
+}
+.wrapper.style1 .inner {
+  padding: 7rem 3.5rem 5rem 3.5rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 64rem;
+}
